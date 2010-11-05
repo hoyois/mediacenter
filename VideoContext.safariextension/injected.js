@@ -59,6 +59,9 @@ function handleBeforeLoadEvent(event) {
     // Streaming videos are not downloadable
     if(/^rts?p:/.test(url)) downloadable = false;
     
+    // Neither are Vimeo videos
+    if(/^(?:http:\/\/vimeo\.com)?\/play_redirect/.test(url)) downloadable = false;
+    
     // Site-specific hacks
     switch(window.location.host) {
         case "trailers.apple.com":
@@ -72,9 +75,17 @@ function handleBeforeLoadEvent(event) {
         case "www.vimeo.com":
             try{
                 media.parentNode.getElementsByClassName("cover")[0].style.pointerEvents = "none";
-                downloadable = false;
             } catch(err){}
             break;
+    }
+    
+    // YouTube5
+    if(media.nextSibling && media.nextSibling.className === "youtube5overlay") {
+        media.nextSibling.style.pointerEvents = "none";
+        var UIElements = media.nextSibling.getElementsByTagName("div");
+        for(var i = 0; i < UIElements.length; i++) {
+            UIElements[i].style.pointerEvents = "auto";
+        }
     }
     
     var handleContextMenu = function(e) {
