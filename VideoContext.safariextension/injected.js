@@ -48,7 +48,7 @@ function handleMessageEvent(event) {
 function handleBeforeLoadEvent(event) {
     const media = event.target;
     if(!(media instanceof HTMLMediaElement)) return;
-    if(media.className === "CTFvideoElement") return; // CTF compatibility
+    if(/\bCTFmediaElement\b/.test(media.className)) return; // CTF compatibility
     var url = event.url;
     if(url === media.poster) return; // posters fire beforeload events...
     
