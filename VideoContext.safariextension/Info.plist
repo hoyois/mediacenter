@@ -4,6 +4,8 @@
 <dict>
 	<key>Author</key>
 	<string>Marc Hoyois</string>
+	<key>Builder Version</key>
+	<string>7534.48.3</string>
 	<key>CFBundleDisplayName</key>
 	<string>Video Context</string>
 	<key>CFBundleIdentifier</key>
