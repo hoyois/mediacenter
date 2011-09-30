@@ -7,26 +7,41 @@
 	<key>Builder Version</key>
 	<string>7534.48.3</string>
 	<key>CFBundleDisplayName</key>
-	<string>Video Context</string>
+	<string>Media Center</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.hoyois.safari.videocontext</string>
+	<string>com.hoyois.safari.mediacenter</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2</string>
+	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1.2</string>
+	<string>2</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
 		<string>global.html</string>
+		<key>Toolbar Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>stop</string>
+				<key>Identifier</key>
+				<string>stop</string>
+				<key>Image</key>
+				<string>stop.png</string>
+				<key>Include By Default</key>
+				<false/>
+				<key>Label</key>
+				<string>AirPlay</string>
+				<key>Palette Label</key>
+				<string>AirPlay</string>
+				<key>Tool Tip</key>
+				<string>Stop</string>
+			</dict>
+		</array>
 	</dict>
 	<key>Content</key>
 	<dict>
-		<key>Blacklist</key>
-		<array>
-			<string>http://exposureroom.com/*</string>
-		</array>
 		<key>Scripts</key>
 		<dict>
 			<key>Start</key>
@@ -36,7 +51,7 @@
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>Adds contextual menu items to HTML5 media elements</string>
+	<string>Play media content in QuickTime Player or on Apple TV</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
@@ -52,6 +67,6 @@
 	<key>Update Manifest URL</key>
 	<string>http://hoyois.github.com/safariextensions/updates.plist</string>
 	<key>Website</key>
-	<string>http://hoyois.github.com/safariextensions/videocontext/</string>
+	<string>http://hoyois.github.com/safariextensions/mediacenter/</string>
 </dict>
 </plist>
