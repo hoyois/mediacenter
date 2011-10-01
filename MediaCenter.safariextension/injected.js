@@ -7,9 +7,6 @@ function downloadURL(url) {
 }
 
 function openInQuickTimePlayer(url) {
-	var anchor = document.createElement("a");
-	anchor.href = url;
-	url = anchor.href;
 	var embed = document.createElement("embed");
 	embed.allowedToLoad = true;
 	embed.className = "CTPallowedToLoad";
@@ -41,7 +38,16 @@ function handleBeforeLoadEvent(event) {
 	if(/\bCTPmediaElement\b/.test(media.className)) return; // CTP compatibility
 	if(event.url === media.poster) return; // posters fire beforeload events
 	
-	var isVideo = media instanceof HTMLVideoElement;	
+	var settings = safari.self.tab.canLoad(event, "");
+	
+	switch(settings.override) {
+	case "preload":
+		media.preload = "none";
+	case "autoplay":
+		media.autoplay = false;
+		break;
+	}
+
 	var overlay;
 	
 	// Site-specific hacks
@@ -60,8 +66,13 @@ function handleBeforeLoadEvent(event) {
 	
 	if(!overlay) overlay = media;
 	
+	// Resolve URL
+	var anchor = document.createElement("a");
+	anchor.href = event.url;
+	var url = anchor.href;
+	
 	overlay.addEventListener("contextmenu", function(e) {
-		safari.self.tab.setContextMenuEventUserInfo(e, {"url": event.url, "isVideo": isVideo});
+		safari.self.tab.setContextMenuEventUserInfo(e, {"url": url, "isVideo": media instanceof HTMLVideoElement});
 	}, false);
 }
 

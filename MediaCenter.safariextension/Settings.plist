@@ -70,11 +70,37 @@
 	</dict>
 	<dict>
 		<key>DefaultValue</key>
+		<string>none</string>
+		<key>Key</key>
+		<string>override</string>
+		<key>Title</key>
+		<string>Initial behavior override</string>
+		<key>Titles</key>
+		<array>
+			<string>—</string>
+			<string>Disable autoplay</string>
+			<string>Disable preloading</string>
+		</array>
+		<key>Type</key>
+		<string>PopUpButton</string>
+		<key>Values</key>
+		<array>
+			<string>none</string>
+			<string>autoplay</string>
+			<string>preload</string>
+		</array>
+	</dict>
+	<dict>
+		<key>Type</key>
+		<string>Separator</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
 		<string>apple-tv.local</string>
 		<key>Key</key>
 		<string>airplayHostname</string>
 		<key>Title</key>
-		<string>AirPlay hostname</string>
+		<string>AirPlay device hostname</string>
 		<key>Type</key>
 		<string>TextField</string>
 	</dict>

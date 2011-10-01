@@ -5,12 +5,17 @@ function airplay(url) {
 }
 
 function stop() {
-   var xhr = new XMLHttpRequest();
+	var xhr = new XMLHttpRequest();
 	xhr.open("POST", "http://" + safari.extension.settings.airplayHostname + ":7000/stop", true, "AirPlay", safari.extension.secureSettings.getItem("airplayPassword"));
 	xhr.send(null);
 }
 
 // TODO: airplayImage (currently only in WebKit nightly builds)
+
+function respondToCanLoad(event) {
+	// Settings for injected script
+	event.message = {"override": safari.extension.settings.override};
+}
 
 function handleContextMenu(event) {
 	if(event.userInfo === null) return;
@@ -30,5 +35,6 @@ function doCommand(event) {
 	else safari.application.activeBrowserWindow.activeTab.page.dispatchMessage(event.command, event.userInfo.url);
 }
 
+safari.application.addEventListener("message", respondToCanLoad, false);
 safari.application.addEventListener("contextmenu", handleContextMenu, false);
 safari.application.addEventListener("command", doCommand, false);
