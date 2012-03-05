@@ -10,9 +10,10 @@ function openInQuickTimePlayer(url) {
 	var embed = document.createElement("embed");
 	embed.allowedToLoad = true;
 	embed.className = "CTPallowedToLoad";
+	embed.style.cssText = "position: absolute; top: 0; left: 0; visibility: hidden;";
 	embed.setAttribute("type", "video/quicktime");
-	embed.setAttribute("width", "0");
-	embed.setAttribute("height", "0");
+	embed.setAttribute("width", "1");
+	embed.setAttribute("height", "1");
 	embed.setAttribute("src", "http://images.apple.com/apple-events/includes/qtbutton.mov");
 	embed.setAttribute("href", url);
 	embed.setAttribute("target", "quicktimeplayer");
@@ -69,10 +70,9 @@ function handleBeforeLoadEvent(event) {
 	// Resolve URL
 	var anchor = document.createElement("a");
 	anchor.href = event.url;
-	var url = anchor.href;
 	
 	overlay.addEventListener("contextmenu", function(e) {
-		safari.self.tab.setContextMenuEventUserInfo(e, {"url": url, "isVideo": media instanceof HTMLVideoElement});
+		safari.self.tab.setContextMenuEventUserInfo(e, {"url": anchor.href, "isVideo": media instanceof HTMLVideoElement});
 	}, false);
 }
 

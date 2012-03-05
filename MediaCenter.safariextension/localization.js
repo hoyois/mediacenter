@@ -1,4 +1,4 @@
-// VideoContext localization file
+// Media Center localization file
 // Save with encoding: UTF-8
 
 function fallback(lang) {
@@ -18,6 +18,7 @@ function fallback(lang) {
 const STRINGS = {
 	"DOWNLOAD_VIDEO": {
 		"en-us": "Download Video",
+		"tr-tr": "Videoyu indir",
 		"fr-fr": "Télécharger la vidéo",
 		"es-es": "Descargar el vídeo",
 		"de-de": "Video herunterladen",
@@ -27,6 +28,7 @@ const STRINGS = {
 	},
 	"DOWNLOAD_AUDIO": {
 		"en-us": "Download Audio",
+		"tr-tr": "Sesi indir",
 		"fr-fr": "Télécharger l’audio",
 		"es-es": "Descargar el audio",
 		"de-de": "Audio herunterladen",
@@ -36,6 +38,7 @@ const STRINGS = {
 	},
 	"OPEN_IN_QUICKTIME_PLAYER": {
 		"en-us": "Open in QuickTime Player",
+		"tr-tr": "QuickTime Player’da aç",
 		"fr-fr": "Ouvrir dans QuickTime Player",
 		"es-es": "Abrir en QuickTime Player",
 		"de-de": "Im QuickTime-Player öffnen",
@@ -45,6 +48,7 @@ const STRINGS = {
 	},
 	"SEND_VIA_AIRPLAY": {
 		"en-us": "Send via AirPlay",
+		"tr-tr": "AirPlay ile gönder",
 		"fr-fr": "Ouvrir dans QuickTime Player",
 		"es-es": "Enviar vía AirPlay",
 		"de-de": "An AirPlay-Gerät senden",
