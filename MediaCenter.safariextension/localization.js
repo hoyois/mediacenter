@@ -11,6 +11,7 @@ function fallback(lang) {
 	case "es-xl": return "es-es";
 	case "de-at":
 	case "de-ch": return "de-de";
+	case "no-nb": return "no-nb";
 	default: return "en-us";
 	}
 }
@@ -23,6 +24,7 @@ const STRINGS = {
 		"es-es": "Descargar el vídeo",
 		"de-de": "Video herunterladen",
 		"ja-jp": "ビデオを保存",
+		"no-nb": "Last ned video",
 		"zh-tw": "下載影片",
 		"zh-cn": "下载视频"
 	},
@@ -33,6 +35,7 @@ const STRINGS = {
 		"es-es": "Descargar el audio",
 		"de-de": "Audio herunterladen",
 		"ja-jp": "オーディオを保存",
+		"no-nb": "Last ned lyd",
 		"zh-tw": "下載音頻",
 		"zh-cn": "下载音频"
 	},
@@ -43,6 +46,7 @@ const STRINGS = {
 		"es-es": "Abrir en QuickTime Player",
 		"de-de": "Im QuickTime-Player öffnen",
 		"ja-jp": "QuickTime プレーヤーで開く",
+		"no-nb": "Åpne i QuickTime Player",
 		"zh-tw": "於 QuickTime Player 檢視",
 		"zh-cn": "在 QuickTime Player 查看"
 	},
@@ -53,6 +57,7 @@ const STRINGS = {
 		"es-es": "Enviar vía AirPlay",
 		"de-de": "An AirPlay-Gerät senden",
 		"ja-jp": "AirPlay を経由で出力",
+		"no-nb": "Spill av via AirPlay",
 		"zh-tw": "經由 AirPlay 輸出",
 		"zh-cn": "通过 AirPlay 输出"
 	}
