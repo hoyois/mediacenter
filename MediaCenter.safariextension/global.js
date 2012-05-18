@@ -1,6 +1,22 @@
 function airplay(url) {
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", "http://" + safari.extension.settings.airplayHostname + ":7000/play", true, "AirPlay", safari.extension.secureSettings.getItem("airplayPassword"));
+	xhr.onload = function() {
+		// Set timer to prevent playback from aborting
+		var timer = setInterval(function() {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "http://" + safari.extension.settings.airplayHostname + ":7000/playback-info", true, "AirPlay", safari.extension.secureSettings.getItem("airplayPassword"));
+			xhr.onload = function() {
+				if(xhr.responseXML.getElementsByTagName("key").length === 0) { // playback terminated
+					clearInterval(timer);
+				}
+			};
+			xhr.onerror = function() {
+				clearInterval(timer);
+			};
+			xhr.send();
+		}, 1000);
+	};
 	xhr.send("Content-Location:" + url + "\nStart-Position:0\n");
 }
 
