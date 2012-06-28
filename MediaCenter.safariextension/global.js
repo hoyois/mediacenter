@@ -1,13 +1,13 @@
 function airplay(url) {
 	var xhr = new XMLHttpRequest();
 	var port = ":7000";
-	if(/:\d+$/.test(settings.airplayHostname)) port = "";
-	xhr.open("POST", "http://" + settings.airplayHostname + port + "/play", true, "AirPlay", secureSettings.getItem("airplayPassword"));
+	if(/:\d+$/.test(safari.extension.settings.airplayHostname)) port = "";
+	xhr.open("POST", "http://" + safari.extension.settings.airplayHostname + port + "/play", true, "AirPlay", safari.extension.secureSettings.getItem("airplayPassword"));
 	xhr.addEventListener("load", function() {
 		// Set timer to prevent playback from aborting
 		var timer = setInterval(function() {
 			var xhr = new XMLHttpRequest();
-			xhr.open("GET", "http://" + settings.airplayHostname + port + "/playback-info", true, "AirPlay", secureSettings.getItem("airplayPassword"));
+			xhr.open("GET", "http://" + safari.extension.settings.airplayHostname + port + "/playback-info", true, "AirPlay", safari.extension.secureSettings.getItem("airplayPassword"));
 			xhr.addEventListener("load", function() {
 				if(xhr.responseXML.getElementsByTagName("key").length === 0) { // playback terminated
 					clearInterval(timer);
