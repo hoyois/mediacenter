@@ -22,8 +22,10 @@ function airplay(url) {
 
 function stop() {
 	var xhr = new XMLHttpRequest();
-	xhr.open("POST", "http://" + safari.extension.settings.airplayHostname + ":7000/stop", true, "AirPlay", safari.extension.secureSettings.getItem("airplayPassword"));
-	xhr.send(null);
+	var port = ":7000";
+	if(/:\d+$/.test(safari.extension.settings.airplayHostname)) port = "";
+	xhr.open("POST", "http://" + safari.extension.settings.airplayHostname + port + "/stop", true, "AirPlay", safari.extension.secureSettings.getItem("airplayPassword"));
+	xhr.send(""); // sic
 }
 
 // TODO: airplayImage (currently only in WebKit nightly builds)
