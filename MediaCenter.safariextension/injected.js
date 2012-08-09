@@ -70,6 +70,7 @@ function handleBeforeLoadEvent(event) {
 	anchor.href = event.url;
 	
 	overlay.addEventListener("contextmenu", function(e) {
+		if(!settings.allowPropagation) e.stopPropagation();
 		safari.self.tab.setContextMenuEventUserInfo(e, {"url": anchor.href, "isVideo": media instanceof HTMLVideoElement});
 	}, false);
 }

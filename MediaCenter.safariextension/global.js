@@ -28,11 +28,14 @@ function stop() {
 	xhr.send(""); // sic
 }
 
-// TODO: airplayImage (currently only in WebKit nightly builds)
+// TODO: airplayImage ??
 
 function respondToCanLoad(event) {
 	// Settings for injected script
-	event.message = {"override": safari.extension.settings.override};
+	event.message = {
+		"override": safari.extension.settings.override,
+		"allowPropagation": safari.extension.settings.allowPropagation
+	};
 }
 
 function handleContextMenu(event) {
