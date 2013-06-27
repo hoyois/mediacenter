@@ -17,6 +17,7 @@ function airplay(url) {
 			xhr.send(null);
 		}, 1000);
 	}, false);
+	xhr.setRequestHeader("Content-Type", "text/parameters");
 	xhr.send("Content-Location: " + url + "\nStart-Position: 0\n");
 }
 
@@ -27,8 +28,6 @@ function stop() {
 	xhr.open("POST", "http://" + safari.extension.settings.airplayHostname + port + "/stop", true, "AirPlay", safari.extension.secureSettings.getItem("airplayPassword"));
 	xhr.send(""); // sic
 }
-
-// TODO: airplayImage ??
 
 function respondToCanLoad(event) {
 	// Settings for injected script

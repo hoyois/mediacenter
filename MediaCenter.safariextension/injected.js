@@ -56,6 +56,8 @@ function handleBeforeLoadEvent(event) {
 		overlay = media.parentNode.getElementsByClassName("ACMediaControls")[0];
 	} else if(location.host.indexOf("vimeo.com") !== -1) {
 		overlay = media.parentNode.parentNode;
+	} else if(location.host.indexOf("dailymotion.com") !== -1) {
+		overlay = document.getElementById("controls");
 	}
 	
 	// YouTube5
