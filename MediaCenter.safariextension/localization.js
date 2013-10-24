@@ -27,7 +27,8 @@ const STRINGS = {
 		"ja-jp": "ビデオを保存",
 		"nb-no": "Last ned video",
 		"zh-tw": "下載影片",
-		"zh-cn": "下载视频"
+		"zh-cn": "下载视频",
+		"pl-pl": "Pobierz wideo"
 	},
 	"DOWNLOAD_AUDIO": {
 		"en-us": "Download Audio",
@@ -39,7 +40,8 @@ const STRINGS = {
 		"ja-jp": "オーディオを保存",
 		"nb-no": "Last ned lyd",
 		"zh-tw": "下載音頻",
-		"zh-cn": "下载音频"
+		"zh-cn": "下载音频",
+		"pl-pl": "Pobierz audio"
 	},
 	"OPEN_IN_QUICKTIME_PLAYER": {
 		"en-us": "Open in QuickTime Player",
@@ -51,7 +53,8 @@ const STRINGS = {
 		"ja-jp": "QuickTime プレーヤーで開く",
 		"nb-no": "Åpne i QuickTime Player",
 		"zh-tw": "於 QuickTime Player 檢視",
-		"zh-cn": "在 QuickTime Player 查看"
+		"zh-cn": "在 QuickTime Player 查看",
+		"pl-pl": "Odtwórz w QuickTime Player"
 	},
 	"SEND_VIA_AIRPLAY": {
 		"en-us": "Send via AirPlay",
@@ -63,7 +66,8 @@ const STRINGS = {
 		"ja-jp": "AirPlay を経由で出力",
 		"nb-no": "Spill av via AirPlay",
 		"zh-tw": "經由 AirPlay 輸出",
-		"zh-cn": "通过 AirPlay 输出"
+		"zh-cn": "通过 AirPlay 输出",
+		"pl-pl": "Prześlij przez AirPlay"
 	}
 };
 
