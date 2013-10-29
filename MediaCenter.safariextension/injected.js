@@ -55,7 +55,7 @@ function handleBeforeLoadEvent(event) {
 	if(location.host.indexOf("apple.com") !== -1) {
 		overlay = media.parentNode.getElementsByClassName("ACMediaControls")[0];
 	} else if(location.host.indexOf("vimeo.com") !== -1) {
-		overlay = document.getElementsByClassName("player_container")[0];
+		overlay = document.getElementsByClassName("player")[0];
 	} else if(location.host.indexOf("dailymotion.com") !== -1) {
 		overlay = document.getElementById("controls");
 	}
