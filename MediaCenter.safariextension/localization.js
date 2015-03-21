@@ -16,7 +16,7 @@ function fallback(lang) {
 	}
 }
 
-const STRINGS = {
+var STRINGS = {
 	"DOWNLOAD_VIDEO": {
 		"en-us": "Download Video",
 		"tr-tr": "Videoyu indir",
@@ -28,7 +28,9 @@ const STRINGS = {
 		"nb-no": "Last ned video",
 		"zh-tw": "下載影片",
 		"zh-cn": "下载视频",
-		"pl-pl": "Pobierz wideo"
+		"pl-pl": "Pobierz wideo",
+		"ca-es": "Baixeu el vídeo",
+		"pt-br": "Transferir Vídeo"
 	},
 	"DOWNLOAD_AUDIO": {
 		"en-us": "Download Audio",
@@ -41,7 +43,9 @@ const STRINGS = {
 		"nb-no": "Last ned lyd",
 		"zh-tw": "下載音頻",
 		"zh-cn": "下载音频",
-		"pl-pl": "Pobierz audio"
+		"pl-pl": "Pobierz audio",
+		"ca-es": "Baixeu l'àudio",
+		"pt-br": "Transferir Áudio"
 	},
 	"OPEN_IN_QUICKTIME_PLAYER": {
 		"en-us": "Open in QuickTime Player",
@@ -54,7 +58,9 @@ const STRINGS = {
 		"nb-no": "Åpne i QuickTime Player",
 		"zh-tw": "於 QuickTime Player 檢視",
 		"zh-cn": "在 QuickTime Player 查看",
-		"pl-pl": "Odtwórz w QuickTime Player"
+		"pl-pl": "Odtwórz w QuickTime Player",
+		"ca-es": "Obriu en QuickTime Player",
+		"pt-br": "Abrir no QuickTime Player"
 	},
 	"SEND_VIA_AIRPLAY": {
 		"en-us": "Send via AirPlay",
@@ -67,7 +73,9 @@ const STRINGS = {
 		"nb-no": "Spill av via AirPlay",
 		"zh-tw": "經由 AirPlay 輸出",
 		"zh-cn": "通过 AirPlay 输出",
-		"pl-pl": "Prześlij przez AirPlay"
+		"pl-pl": "Prześlij przez AirPlay",
+		"ca-es": "Envieu via AirPlay",
+		"pt-br": "Enviar via AirPlay"
 	}
 };
 

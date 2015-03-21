@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Marc Hoyois</string>
 	<key>Builder Version</key>
-	<string>8537.71</string>
+	<string>10600.4.10.7</string>
 	<key>CFBundleDisplayName</key>
 	<string>Media Center</string>
 	<key>CFBundleIdentifier</key>
@@ -13,9 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.2</string>
+	<string>2.3</string>
 	<key>CFBundleVersion</key>
-	<string>14</string>
+	<string>15</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
@@ -52,6 +52,8 @@
 	</dict>
 	<key>Description</key>
 	<string>Play media content in QuickTime Player or on Apple TV</string>
+	<key>DeveloperIdentifier</key>
+	<string>GY5KR7239Q</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>

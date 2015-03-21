@@ -14,7 +14,7 @@ function openInQuickTimePlayer(url) {
 	embed.setAttribute("type", "video/quicktime");
 	embed.setAttribute("width", "1");
 	embed.setAttribute("height", "1");
-	embed.setAttribute("src", "http://images.apple.com/apple-events/includes/qtbutton.mov");
+	embed.setAttribute("src", "http://hoyois.github.io/qtbutton.mov");
 	embed.setAttribute("href", url);
 	embed.setAttribute("target", "quicktimeplayer");
 	embed.setAttribute("autohref", "true");
@@ -37,6 +37,7 @@ function handleBeforeLoadEvent(event) {
 	var media = event.target;
 	if(!(media instanceof HTMLMediaElement)) return;
 	if(/\bCTPmediaElement\b/.test(media.className)) return; // CTP compatibility
+	if(/^blob:/.test(event.url)) return; // ignore MSE
 	if(event.url === media.poster) return; // posters fire beforeload events
 	
 	var settings = safari.self.tab.canLoad(event, "");
