@@ -49,7 +49,7 @@ function handleBeforeLoadEvent(event) {
 		media.autoplay = false;
 		break;
 	}
-
+	
 	var overlay;
 	
 	// Site-specific hacks
@@ -72,10 +72,11 @@ function handleBeforeLoadEvent(event) {
 	var anchor = document.createElement("a");
 	anchor.href = event.url;
 	
-	overlay.addEventListener("contextmenu", function(e) {
-		if(!settings.allowPropagation) e.stopPropagation();
+	document.addEventListener("contextmenu", function(e) {
+		if(!overlay.contains(e.target)) return;
+		if(!settings.allowPropagation) e.stopImmediatePropagation();
 		safari.self.tab.setContextMenuEventUserInfo(e, {"url": anchor.href, "isVideo": media instanceof HTMLVideoElement});
-	}, false);
+	}, true);
 }
 
 // Links
